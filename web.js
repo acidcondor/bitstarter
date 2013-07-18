@@ -5,8 +5,7 @@ var app = express.createServer(express.logger());
 var messdata;
 
 app.get('/', function(request, response) {
- var k = fs.readFileSync('./index.html','utf8');
- response.send( k );
+ response.send( fs.readFileSync('./index.html','utf8') );
 });
 
 /*fs.readFileSync('index.html', function (err, data) {
